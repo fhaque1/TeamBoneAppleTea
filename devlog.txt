@@ -11,3 +11,6 @@ Finished looking over design document, pushed final DESIGN.pdf to github
 
 lindseyM -- 2016-12-06 00:23
 Created the bare minimum bootstrap page
+
+farhanH -- 2016-12-06 12:19
+Updated schedule, switched completion date of databaseIO.py and apiManager.py
