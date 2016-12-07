@@ -20,3 +20,6 @@ Added the scrollable button panel
 
 patrickC -- 2016-12-06 13:57
 Add framework for app.py, finished basic functionality for databaseIO.py
+
+lindseyM -- 2016-12-07 02:10
+minor changes to html/css; map column being pushed to second row for some reason
