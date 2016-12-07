@@ -23,3 +23,6 @@ Add framework for app.py, finished basic functionality for databaseIO.py
 
 lindseyM -- 2016-12-07 02:10
 minor changes to html/css; map column being pushed to second row for some reason
+
+janetZ, lindseyM --2016-12-07 12:27
+finished bare bootstrap for page; will style after map is functioning
