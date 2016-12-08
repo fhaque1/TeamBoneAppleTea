@@ -26,3 +26,7 @@ minor changes to html/css; map column being pushed to second row for some reason
 
 janetZ, lindseyM --2016-12-07 12:27
 finished bare bootstrap for page; will style after map is functioning
+
+farhanH -- 2016-12-07 21:24
+added geochartmap.html: uses Google Maps JS API to make interactive US Map.
+Frontend to incorporate into map.html later.
