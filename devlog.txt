@@ -30,3 +30,7 @@ finished bare bootstrap for page; will style after map is functioning
 farhanH -- 2016-12-07 21:24
 added geochartmap.html: uses Google Maps JS API to make interactive US Map.
 Frontend to incorporate into map.html later.
+
+patrickC -- 2016-12-08 21:34
+Note: Didn't have enough time to push an update to the devlog during class
+Laid the basic foundations for apiManager, might need some modifications in the future depending on structure of the request
