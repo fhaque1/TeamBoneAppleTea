@@ -19,7 +19,7 @@ import csv
 		print row['code']
 		'''
 
-reader = csv.reader(open('2011_us_ag_exports.csv'))
+#reader = csv.reader(open('2011_us_ag_exports.csv'))
 
 '''
 result = {}
