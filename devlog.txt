@@ -34,3 +34,6 @@ Frontend to incorporate into map.html later.
 patrickC -- 2016-12-08 21:34
 Note: Didn't have enough time to push an update to the devlog during class
 Laid the basic foundations for apiManager, might need some modifications in the future depending on structure of the request
+
+lindseyM, janetZ -- 2016-12-09 12:20
+Wrote csv to dictionary function so we don't need Pandas anymore.
