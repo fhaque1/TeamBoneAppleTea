@@ -18,8 +18,6 @@ df = pd.read_csv('https://raw.githubusercontent.com/plotly/datasets/master/2011_
 for col in df.columns:
     df[col] = df[col].astype(str)
 
-scl = [[0.0, 'rgb(242,240,247)'],[0.2, 'rgb(218,218,235)'],[0.4, 'rgb(188,189,220)'],\
-            [0.6, 'rgb(158,154,200)'],[0.8, 'rgb(117,107,177)'],[1.0, 'rgb(84,39,143)']]
 '''
 df = result
 x = {'text':[]}
@@ -30,6 +28,7 @@ while x < len( df ['beef'] ):
     'Fruits '+df[x]['total fruits']+' Veggies ' + df[x]['total veggies']+'<br>'+\
     'Wheat '+df[x]['wheat']+' Corn '+df[x]['corn']
 
+#print s
 
 df = result
 
@@ -64,4 +63,4 @@ layout = dict(
              )
     
 fig = dict( data=data, layout=layout )
-py.iplot( fig, filename='d3-cloropleth-map' )
+py.plot( fig, filename='d3-cloropleth-map' )

@@ -41,3 +41,6 @@ Wrote csv to dictionary function so we don't need Pandas anymore.
 patrickC -- 2016-12-10 21:45
 Wrote a python script to generate a mapping between state code and state name
 Modified apiManager.py base on the structure of the api links
+
+janetZ -- 2016-12-11 02:54
+Configured API Key for plotly map on my working env...It works, it's beautiful :')
