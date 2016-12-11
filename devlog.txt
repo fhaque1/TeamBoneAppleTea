@@ -37,3 +37,7 @@ Laid the basic foundations for apiManager, might need some modifications in the 
 
 lindseyM, janetZ -- 2016-12-09 12:20
 Wrote csv to dictionary function so we don't need Pandas anymore.
+
+patrickC -- 2016-12-10 21:45
+Wrote a python script to generate a mapping between state code and state name
+Modified apiManager.py base on the structure of the api links
