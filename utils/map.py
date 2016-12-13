@@ -1,24 +1,8 @@
 import plotly.plotly as py
+from apiManager import censusAPIManager
 
-
-import csv
-reader = csv.DictReader(open('2011_us_ag_exports.csv'))
-
-result = {}
-for row in reader:
-    for column, value in row.iteritems():
-        result.setdefault(column, []).append(value)
-#print result
-
-'''
-import pandas as pd
-
-df = pd.read_csv('https://raw.githubusercontent.com/plotly/datasets/master/2011_us_ag_exports.csv')
-
-for col in df.columns:
-    df[col] = df[col].astype(str)
-
-'''
+hi = censusAPIManager('https://api.census.gov/data/')
+result = hi.getAPIData(2015, 'acs5?get=NAME,B01001_001E&for=state:*')
 df = result
 x = {'text':[]}
 s=""
