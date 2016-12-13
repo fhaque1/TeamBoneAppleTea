@@ -22,4 +22,4 @@ class censusAPIManager:
         if needAPIKey:
             apiUrl += '&key=' + self.apiKey
         apiData = self.getUrlContent(apiUrl)
-        return apiData        
+        return eval(apiData)
