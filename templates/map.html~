@@ -50,8 +50,10 @@
 				<!---->
 				<!--map-->
 				<div class="col-md-8" style="border: 2px solid black">
-				MAP
-				</div>
+					MAP
+					<br>
+					<iframe width="500" height="500" frameborder="0" scrolling="no" src= {{ url }} ></iframe>
+				<div>
 			</div>
 		</div>
 		
