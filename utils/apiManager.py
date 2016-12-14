@@ -18,7 +18,7 @@ class censusAPIManager:
         return urlContent
 
     def getAPIData(self, year, request, needAPIKey=False):
-        apiUrl = self.mainUrl + str(year) + '/' + request
+        apiUrl = self.mainUrl + year + '/' + request
         if needAPIKey:
             apiUrl += '&key=' + self.apiKey
         apiData = self.getUrlContent(apiUrl)

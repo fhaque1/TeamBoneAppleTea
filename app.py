@@ -1,10 +1,10 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
 @app.route("/")
 def root():
-    return render_template("map.html", url = "https://plot.ly/~fhaque1/0.embed")
+    return render_template("map.html", url = "https://plot.ly/~fhaque1/14.embed")
 
 @app.route("/pop5")	
 def population5():
