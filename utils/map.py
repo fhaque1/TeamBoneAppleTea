@@ -44,7 +44,7 @@ data = [ dict(
         ) ]
 
 layout = dict(
-        title = 'New Map<br>(Hover for breakdown)',
+        title = 'American Population by State (2009-2015)<br>(Hover for breakdown)',
         geo = dict(
             scope='usa',
             projection=dict( type='albers usa' ),
