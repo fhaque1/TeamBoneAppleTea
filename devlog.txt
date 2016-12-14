@@ -50,3 +50,6 @@ Only made changes to map.html; tried to make toggle switches show map; it does n
 
 farhanH, lindseyM, patrickC -- 2016-12-13 17:00
 Put Map on map.html, and began configuring app.py and map.py
+
+farhanH -- 2016-12-13 22:00
+Created Map for American Community Service 5 year Data, and put on Map.html
