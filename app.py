@@ -6,8 +6,9 @@ app = Flask(__name__)
 def root():
     return render_template("map.html", url = "https://plot.ly/~fhaque1/0.embed")
 
-def agri("/agri")
-	return render_template
+@app.route("/agri")	
+def agri():
+	return render_template("map.html", url = "https://plot.ly/~fhaque1/0.embed")
 
 
 
