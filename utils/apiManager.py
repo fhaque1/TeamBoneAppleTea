@@ -8,7 +8,7 @@ class censusAPIManager:
         self.apiKey = self.getAPIKey()
         
     def getAPIKey(self):
-        with open('..\apiKey.txt') as file_:
+        with open('../apiKey.txt') as file_:
             key = file_.read()
         return key
     

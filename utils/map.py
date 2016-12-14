@@ -8,13 +8,25 @@ scl = [[0.0, 'rgb(242,240,247)'],[0.2, 'rgb(218,218,235)'],[0.4, 'rgb(188,189,22
 
 print result
 
+x = []
 
+for d in result:
+	x.append(d[1])
+
+x = x[1:]	
+
+states = ["AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DC", "DE", "FL", "GA", 
+          "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD", 
+          "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", 
+          "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC", 
+          "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY"]
+	
 data = [ dict(
         type='choropleth',
         colorscale = scl,
         autocolorscale = False,
-        locations = ["NY"],
-        z = [0.5],#.astype(float),
+        locations = states,
+        z = x,#.astype(float),
         locationmode = 'USA-states',
         text = "random",
         marker = dict(
@@ -35,6 +47,6 @@ layout = dict(
             lakecolor = 'rgb(255, 255, 255)'),
              )
     
-fig = dict( data=data, layout=layout )
-print fig
-py.plot( fig, filename='hello' )
+#fig = dict( data=data, layout=layout )
+#print fig
+#py.plot( fig, filename='hello' )
