@@ -8,7 +8,7 @@ def root():
 
 @app.route("/agri")	
 def agri():
-	return render_template("map.html", url = "https://plot.ly/~fhaque1/0.embed")
+	return render_template("map.html", url = "https://plot.ly/~fhaque1/6.embed")
 
 
 
