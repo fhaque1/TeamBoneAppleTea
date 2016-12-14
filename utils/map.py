@@ -13,19 +13,24 @@ x = []
 for d in result:
 	x.append(d[1])
 
-x = x[1:]	
+x = x[1:8]+x[9:39]+x[40:]	
 
-states = ["AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DC", "DE", "FL", "GA", 
+states = ["AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA", 
           "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD", 
           "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", 
           "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC", 
           "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY"]
+statez = ["AK", "AL", "AR", "AZ", "CA", "CO", "CT", "DE", "FL", "GA", 
+          "HI", "IA", "ID", "IL", "IN", "KS", "KY", "LA", "MA", "MD", 
+          "ME", "MI", "MN", "MO", "MS", "MT", "NC", "ND", "NE", "NH", 
+          "NJ", "NM", "NV", "NY", "OH", "OK", "OR", "PA", "RI", "SC", 
+          "SD", "TN", "TX", "UT", "VA", "VT", "WA", "WI", "WV", "WY"]
 	
 data = [ dict(
         type='choropleth',
         colorscale = scl,
         autocolorscale = False,
-        locations = states,
+        locations = statez,
         z = x,#.astype(float),
         locationmode = 'USA-states',
         text = "random",
@@ -47,6 +52,6 @@ layout = dict(
             lakecolor = 'rgb(255, 255, 255)'),
              )
     
-#fig = dict( data=data, layout=layout )
-#print fig
-#py.plot( fig, filename='hello' )
+fig = dict( data=data, layout=layout )
+print fig
+py.plot( fig, filename='hello' )
