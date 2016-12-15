@@ -66,3 +66,6 @@ Edited design changes doc
 
 farhanH, -- 2016-12-15 03:14
 Finished map.py, map.html, and app.py. Completed Functionality
+
+lindseyM -- 2016-12-15 03:36
+Finished styling, testing.
