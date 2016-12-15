@@ -1,5 +1,6 @@
 from urllib2 import urlopen, URLError
 from json import loads
+import os
 
 class censusAPIManager:
 
@@ -8,7 +9,8 @@ class censusAPIManager:
         self.apiKey = self.getAPIKey()
         
     def getAPIKey(self):
-        with open('../apiKey.txt') as file_:
+        path = os.getcwd() + '/apiKey.txt'
+        with open(path) as file_:
             key = file_.read().split("\n")[0]
         return key
     
