@@ -46,7 +46,27 @@ def poverty04():
 @app.route("/poverty517")
 def poverty517():
     return render_template("map.html", url = "https://plot.ly/~farhan3231/22.embed?autosize=True&link=false&modebar=false")
+
+@app.route("/povertyMOE")
+def povertyMOE():
+    return render_template("map.html", url = "https://plot.ly/~farhan3231/28.embed?autosize=True&link=false&modebar=false")
+
+@app.route("/poverty04MOE")
+def poverty04MOE():
+    return render_template("map.html", url = "https://plot.ly/~farhan3231/30.embed?autosize=True&link=false&modebar=false")
 	
+@app.route("/poverty517MOE")
+def poverty517MOE():
+    return render_template("map.html", url = "https://plot.ly/~farhan3231/32.embed?autosize=True&link=false&modebar=false")
+	
+	
+@app.route("/householdincome")
+def householdincome():
+    return render_template("map.html", url = "https://plot.ly/~farhan3231/24.embed?autosize=True&link=false&modebar=false")
+	
+@app.route("/householdincomeerror")
+def householdincomeerror():
+    return render_template("map.html", url = "https://plot.ly/~farhan3231/26.embed?autosize=True&link=false&modebar=false")
 	
 @app.route("/<path:censusURL>")
 def renderFilteredData(censusURL):

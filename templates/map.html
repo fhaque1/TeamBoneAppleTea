@@ -63,7 +63,7 @@
             <br> French
           </a>
         </div>
-<<<<<<< HEAD
+
 
         <div class="col-md-6">
           <a href="/spanish"
@@ -72,9 +72,8 @@
           </a>
         </div>
 
-=======
+
       <!--</div>-->
->>>>>>> a0cb64b457d95f9be71c237ea752047e129387f4
       </div>
 	  
 	  <br>
@@ -99,7 +98,7 @@
       <br> Health Insurance
       <div class="row">
 
-<<<<<<< HEAD
+
         <div class="col-md-6">
           <a href="/insured"
             class="btn btn-default">
@@ -124,7 +123,16 @@
             <br> Number of People in Poverty
           </a>
         </div>
+		
+		<div class="col-md-6">
+			<a href="/povertyMOE"
+				class="btn btn-default">
+				<br> Number of People in Poverty Margin of Error
+			</a>
+		</div>
 
+		<br>
+		  
         <div class="col-md-6">
           <a href="/poverty04"
             class="btn btn-default">
@@ -132,85 +140,49 @@
           </a>
         </div>
 		
+		<div class="col-md-6">
+			<a href="/poverty04MOE"
+				class="btn btn-default">
+				<br> Number of People in Poverty Ages 0-4 Margin of Error
+			</a>
+		</div>
+		
 		<br>
 		
 		<div class="col-md-6">
-          <a href="{{url_for('renderFilteredData', censusURL='Number of People in Poverty Ages 5-17$http://api.census.gov/data/timeseries/poverty/saipe?get=STABREV,SAEPOV5_17R_PT&for=state:*&time=2015')}}"
+          <a href="/poverty517"
             class="btn btn-default">
             <br> Number of People in Poverty Ages 5-17
           </a>
         </div>
-=======
-  <div class="col-md-6">
-    <a href="{{url_for('renderFilteredData', censusURL='Number of Spanish Speakers By State$http://api.census.gov/data/2013/language?get=NAME,EST,LANLABEL&for=state:*&LAN=625')}}"
-      class="btn btn-default">
-      <br> Spanish
-    </a>
-  </div>
+		
+		<div class="col-md-6">
+			<a href="/poverty517MOE"
+				class="btn btn-default">
+				<br> Number of People in Poverty Ages 5-17 Margin of Error
+			</a>
+		</div>
 
-  <div class="col-md-6">
-    <a href="{{url_for('renderFilteredData', censusURL='http://api.census.gov/data/2013/language?get=EST,LANLABEL,NAME&for=state:*&LAN=625')}}"
-      class="btn btn-default">
-      <br> Spanish
-    </a>
-  </div>
+		</div>
+		<br> Income
+		<div class="row">
 
-</div>
-<br> Language
-<div class="row">
+		<div class="col-md-6">
+			<a href="/householdincome"
+				class="btn btn-default">
+				<br> Median Household Income
+			</a>
+		</div>
+		
+		<div class="col-md-6">
+			<a href="/householdincomeerror"
+				class="btn btn-default">
+				<br> Median Household Income Margin of Error
+			</a>
+		</div>
 
-  <div class="col-md-6">
-    <a href="{{url_for('renderFilteredData', censusURL='http://api.census.gov/data/2013/language?get=EST,LANLABEL,NAME&for=state:*&LAN=625')}}"
-      class="btn btn-default">
-      <br> Spanish
-    </a>
-  </div>
+		</div>
 
-  <div class="col-md-6">
-    <a href="{{url_for('renderFilteredData', censusURL='http://api.census.gov/data/2013/language?get=EST,LANLABEL,NAME&for=state:*&LAN=625')}}"
-      class="btn btn-default">
-      <br> Spanish
-    </a>
-  </div>
-
-</div>
-<br> Language
-<div class="row">
-
-  <div class="col-md-6">
-    <a href="{{url_for('renderFilteredData', censusURL='http://api.census.gov/data/2013/language?get=EST,LANLABEL,NAME&for=state:*&LAN=625')}}"
-      class="btn btn-default">
-      <br> Spanish
-    </a>
-  </div>
-
-  <div class="col-md-6">
-    <a href="{{url_for('renderFilteredData', censusURL='http://api.census.gov/data/2013/language?get=EST,LANLABEL,NAME&for=state:*&LAN=625')}}"
-      class="btn btn-default">
-      <br> Spanish
-    </a>
-  </div>
-
-</div>
-<br> Language
-<div class="row">
-
-  <div class="col-md-6">
-    <a href="{{url_for('renderFilteredData', censusURL='http://api.census.gov/data/2013/language?get=EST,LANLABEL,NAME&for=state:*&LAN=625')}}"
-      class="btn btn-default">
-      <br> Spanish
-    </a>
-  </div>
-
-  <div class="col-md-6">
-    <a href="{{url_for('renderFilteredData', censusURL='http://api.census.gov/data/2013/language?get=EST,LANLABEL,NAME&for=state:*&LAN=625')}}"
-      class="btn btn-default">
-      <br> Spanish
-    </a>
-  </div>
->>>>>>> a0cb64b457d95f9be71c237ea752047e129387f4
-
-</div>
 
 </div>
 
