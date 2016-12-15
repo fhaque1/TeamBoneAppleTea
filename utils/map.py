@@ -1,6 +1,6 @@
 import plotly.plotly as py
 import plotly.tools as tls
-tls.set_credentials_file(username='fhaque1', api_key='Ya6NGIVkGAO1apmmfmc6')
+tls.set_credentials_file(username='fhaque1', api_key='')
 from apiManager import censusAPIManager
 
 url="http://api.census.gov/data/2013/language?get=EST,LANLABEL,NAME&for=state:*&LAN=625"
