@@ -32,7 +32,7 @@ def blanker(x):
         x[n] = '0'
         n -= 1
 
-def mapMaker(url):
+def mapMaker(url,fname):
 	states = ["AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA",
           "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD",
           "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ",
@@ -53,11 +53,11 @@ def mapMaker(url):
 				width = 2
 			) ),
 		colorbar = dict(
-			title = "test")
+			title = fname)
 	) ]
 
 	layout = dict(
-		title = "Test",
+		title = fname,
 		geo = dict(
 			scope='usa',
 			projection=dict( type='albers usa' ),
@@ -66,4 +66,4 @@ def mapMaker(url):
 	)
 
 	fig = dict( data=data, layout=layout )
-	py.plot(fig, filename='test')
+	py.plot(fig, filename=fname)
