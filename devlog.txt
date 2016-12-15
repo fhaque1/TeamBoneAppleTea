@@ -53,3 +53,6 @@ Put Map on map.html, and began configuring app.py and map.py
 
 farhanH -- 2016-12-13 22:00
 Created Map for American Community Service 5 year Data, and put on Map.html
+
+patrickC -- 2016-12-14 20:42
+Modified README.md to meet the specification and provide more detailed information
