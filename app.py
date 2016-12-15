@@ -5,11 +5,11 @@ app = Flask(__name__)
 
 @app.route("/")
 def root():
-    return render_template("map.html", url = "https://plot.ly/~fhaque1/14.embed")
+    return render_template("map.html", url = "https://plot.ly/~fhaque1/14.embed?autosize=True&link=false&modebar=false")
 
 @app.route("/pop5")
 def population5():
-    return render_template("map.html", url = "https://plot.ly/~fhaque1/10.embed")
+    return render_template("map.html", url = "https://plot.ly/~fhaque1/10.embed?autosize=True&link=false&modebar=false")
 
 @app.route("/<path:censusURL>")
 def renderFilteredData(censusURL):
