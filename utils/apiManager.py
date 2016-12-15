@@ -8,9 +8,10 @@ class censusAPIManager:
         self.apiKey = self.getAPIKey()
         
     def getAPIKey(self):
-        with open('../apiKey.txt') as file_:
-            key = file_.read()
-        return key
+        #with open('../apiKey.txt') as file_:
+        #    key = file_.read()
+        #return key
+		return "4cd111bdf8258f571273b5a7b85c507b675bd04f"
     
     def getUrlContent(self, link):
         urlFile = urlopen(link)

@@ -1,4 +1,6 @@
 import plotly.plotly as py
+import plotly.tools as tls
+tls.set_credentials_file(username='fhaque1', api_key='Ya6NGIVkGAO1apmmfmc6')
 from apiManager import censusAPIManager
 
 url="http://api.census.gov/data/2013/language?get=EST,LANLABEL,NAME&for=state:*&LAN=625"
@@ -6,7 +8,7 @@ url="http://api.census.gov/data/2013/language?get=EST,LANLABEL,NAME&for=state:*&
 #takes in url, gets you the data
 def urlparser(url):
     x = url.split("/")
-    return censusAPIManager('https://api.census.gov/data/').getAPIData(x[5],x[6])
+    return censusAPIManager('https://api.census.gov/data/').getAPIData(x[4],x[5])
 
 #makes map colorful
 scl = [[0.0, 'rgb(242,240,247)'],[0.2, 'rgb(218,218,235)'],[0.4, 'rgb(188,189,220)'],\
@@ -14,11 +16,13 @@ scl = [[0.0, 'rgb(242,240,247)'],[0.2, 'rgb(218,218,235)'],[0.4, 'rgb(188,189,22
 
 #converts census sublists into single data array
 def dataToList(result):
+    result = sorted(result)
     x = []
     for d in result:
-        if d[2] == "NAME" or d[2] == "District of Columbia" or d[2] == "Puerto Rico":
+        if d[0] == "NAME" or d[0] == "District of Columbia" or d[0] == "Puerto Rico":
             continue
-        x.append(d[0])
+        x.append(d[1])
+    return x
 
 #turns every element in a list to '0'
 def blanker(x):
@@ -27,47 +31,38 @@ def blanker(x):
         x[n] = '0'
         n -= 1
 
-
-states = ["AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA",
+def mapMaker(url):
+	states = ["AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA",
           "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD",
           "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ",
           "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC",
           "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY"]
+		  
+	data = [ dict(
+		type='choropleth',
+		colorscale = scl,
+		autocolorscale = False,
+		locations = states,
+		z = dataToList(urlparser(url)),
+		locationmode = 'USA-states',
+		text = "random",
+		marker = dict(
+			line = dict (
+				color = 'rgb(255,255,255)',
+				width = 2
+			) ),
+		colorbar = dict(
+			title = "test")
+	) ]
 
-statez = ["AK", "AL", "AR", "AZ", "CA", "CO", "CT", "DE", "FL", "GA",
-          "HI", "IA", "ID", "IL", "IN", "KS", "KY", "LA", "MA", "MD",
-          "ME", "MI", "MN", "MO", "MS", "MT", "NC", "ND", "NE", "NH",
-          "NJ", "NM", "NV", "NY", "OH", "OK", "OR", "PA", "RI", "SC",
-          "SD", "TN", "TX", "UT", "VA", "VT", "WA", "WI", "WV", "WY"]
+	layout = dict(
+		title = "Test",
+		geo = dict(
+			scope='usa',
+			projection=dict( type='albers usa' ),
+			showlakes = True,
+			lakecolor = 'rgb(255, 255, 255)'),
+	)
 
-data = [ dict(
-    type='choropleth',
-    colorscale = scl,
-    autocolorscale = False,
-    locations = states,
-    #z = x,
-    locationmode = 'USA-states',
-    text = "random",
-    marker = dict(
-        line = dict (
-            color = 'rgb(255,255,255)',
-            width = 2
-        ) ),
-    colorbar = dict(
-        title = "Millions USD")
-) ]
-
-layout = dict(
-    title = 'Number of Spanish Speakers by State (2013)<br>(Hover for breakdown)',
-    geo = dict(
-        scope='usa',
-        projection=dict( type='albers usa' ),
-        showlakes = True,
-        lakecolor = 'rgb(255, 255, 255)'),
-)
-
-
-fig = dict( data=data, layout=layout )
-print fig
-#py.plot(fig, filename='blank')
-#py.plot(fig, filename='hello')
+	fig = dict( data=data, layout=layout )
+	py.plot(fig, filename='test')

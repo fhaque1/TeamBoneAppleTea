@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-from utils.map import urlparser
+from utils import map
 
 app = Flask(__name__)
 
@@ -13,7 +13,7 @@ def population5():
 
 @app.route("/<path:censusURL>")
 def renderFilteredData(censusURL):
-    print urlparser(censusURL)
+    map.mapMaker(censusURL)
 
 if __name__ == '__main__':
     app.debug = True
