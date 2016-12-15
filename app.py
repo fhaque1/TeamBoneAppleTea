@@ -13,7 +13,7 @@ def population5():
 
 @app.route("/<path:censusURL>")
 def renderFilteredData(censusURL):
-    map.mapMaker(censusURL)
+	map.mapMaker(censusURL)
 
 if __name__ == '__main__':
     app.debug = True
