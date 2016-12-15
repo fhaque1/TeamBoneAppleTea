@@ -23,106 +23,111 @@
 <div class="container">
   <div class="row">
     <!--buttons-->
-    <div class="col-md-4 pre-scrollable" style="border: 2px solid black; max-height: 600px"> 
-      <center><h1>US Census Map</h1></center>
-      <center><h4>View by</h4></center>
-
-      <div class="row">
+    <div class="col-md-4 pre-scrollable" style="border: 2px solid black; max-height: 600px">
+      <!--<div class="container" style="position: fixed">-->
         <center>
-        <div class="col-md-12">
-          <form method="post">
-            <a href="/" class="btn btn-default">
-              <br> Blank the map
-            </a>
-          </form>
-        </div>
+          <h1>US Census Map</h1>
         </center>
-      </div>
+        <center>
+          <h4>View by</h4>
+        </center>
 
-      <br> Population
-      <div class="row">
-
-        <div class="col-md-6">
-          <a href="{{url_for('renderFilteredData', censusURL='Population by State$http://api.census.gov/data/2015/acs5?get=NAME,B01001_001E&for=state:*')}}"
-            class="btn btn-default">
-            <br> American Population
-          </a>
+        <div class="row">
+          <center>
+            <div class="col-md-12">
+              <a href="/" class="btn btn-default">
+                <br> Blank the map
+              </a>
+            </div>
+          </center>
         </div>
+      <!--</div>-->
 
-      </div>
 
-      <br> Language
-      <div class="row">
+<br> Population
+<div class="row">
 
-        <div class="col-md-6">
-          <a href="{{url_for('renderFilteredData', censusURL='Number of Spanish Speakers By State$http://api.census.gov/data/2013/language?get=NAME,EST,LANLABEL&for=state:*&LAN=625')}}"
-            class="btn btn-default">
-            <br> Spanish
-          </a>
-        </div>
+  <div class="col-md-6">
+    <a href="{{url_for('renderFilteredData', censusURL='Population by State$http://api.census.gov/data/2015/acs5?get=NAME,B01001_001E&for=state:*')}}"
+      class="btn btn-default">
+      <br> American Population
+    </a>
+  </div>
 
-        <div class="col-md-6">
-          <a href="{{url_for('renderFilteredData', censusURL='http://api.census.gov/data/2013/language?get=EST,LANLABEL,NAME&for=state:*&LAN=625')}}"
-            class="btn btn-default">
-            <br> Spanish
-          </a>
-        </div>
+</div>
 
-      </div>
-      <br> Language
-      <div class="row">
+<br> Language
+<div class="row">
 
-        <div class="col-md-6">
-          <a href="{{url_for('renderFilteredData', censusURL='http://api.census.gov/data/2013/language?get=EST,LANLABEL,NAME&for=state:*&LAN=625')}}"
-            class="btn btn-default">
-            <br> Spanish
-          </a>
-        </div>
+  <div class="col-md-6">
+    <a href="{{url_for('renderFilteredData', censusURL='Number of Spanish Speakers By State$http://api.census.gov/data/2013/language?get=NAME,EST,LANLABEL&for=state:*&LAN=625')}}"
+      class="btn btn-default">
+      <br> Spanish
+    </a>
+  </div>
 
-        <div class="col-md-6">
-          <a href="{{url_for('renderFilteredData', censusURL='http://api.census.gov/data/2013/language?get=EST,LANLABEL,NAME&for=state:*&LAN=625')}}"
-            class="btn btn-default">
-            <br> Spanish
-          </a>
-        </div>
+  <div class="col-md-6">
+    <a href="{{url_for('renderFilteredData', censusURL='http://api.census.gov/data/2013/language?get=EST,LANLABEL,NAME&for=state:*&LAN=625')}}"
+      class="btn btn-default">
+      <br> Spanish
+    </a>
+  </div>
 
-      </div>
-      <br> Language
-      <div class="row">
+</div>
+<br> Language
+<div class="row">
 
-        <div class="col-md-6">
-          <a href="{{url_for('renderFilteredData', censusURL='http://api.census.gov/data/2013/language?get=EST,LANLABEL,NAME&for=state:*&LAN=625')}}"
-            class="btn btn-default">
-            <br> Spanish
-          </a>
-        </div>
+  <div class="col-md-6">
+    <a href="{{url_for('renderFilteredData', censusURL='http://api.census.gov/data/2013/language?get=EST,LANLABEL,NAME&for=state:*&LAN=625')}}"
+      class="btn btn-default">
+      <br> Spanish
+    </a>
+  </div>
 
-        <div class="col-md-6">
-          <a href="{{url_for('renderFilteredData', censusURL='http://api.census.gov/data/2013/language?get=EST,LANLABEL,NAME&for=state:*&LAN=625')}}"
-            class="btn btn-default">
-            <br> Spanish
-          </a>
-        </div>
+  <div class="col-md-6">
+    <a href="{{url_for('renderFilteredData', censusURL='http://api.census.gov/data/2013/language?get=EST,LANLABEL,NAME&for=state:*&LAN=625')}}"
+      class="btn btn-default">
+      <br> Spanish
+    </a>
+  </div>
 
-      </div>
-      <br> Language
-      <div class="row">
+</div>
+<br> Language
+<div class="row">
 
-        <div class="col-md-6">
-          <a href="{{url_for('renderFilteredData', censusURL='http://api.census.gov/data/2013/language?get=EST,LANLABEL,NAME&for=state:*&LAN=625')}}"
-            class="btn btn-default">
-            <br> Spanish
-          </a>
-        </div>
+  <div class="col-md-6">
+    <a href="{{url_for('renderFilteredData', censusURL='http://api.census.gov/data/2013/language?get=EST,LANLABEL,NAME&for=state:*&LAN=625')}}"
+      class="btn btn-default">
+      <br> Spanish
+    </a>
+  </div>
 
-        <div class="col-md-6">
-          <a href="{{url_for('renderFilteredData', censusURL='http://api.census.gov/data/2013/language?get=EST,LANLABEL,NAME&for=state:*&LAN=625')}}"
-            class="btn btn-default">
-            <br> Spanish
-          </a>
-        </div>
+  <div class="col-md-6">
+    <a href="{{url_for('renderFilteredData', censusURL='http://api.census.gov/data/2013/language?get=EST,LANLABEL,NAME&for=state:*&LAN=625')}}"
+      class="btn btn-default">
+      <br> Spanish
+    </a>
+  </div>
 
-      </div>
+</div>
+<br> Language
+<div class="row">
+
+  <div class="col-md-6">
+    <a href="{{url_for('renderFilteredData', censusURL='http://api.census.gov/data/2013/language?get=EST,LANLABEL,NAME&for=state:*&LAN=625')}}"
+      class="btn btn-default">
+      <br> Spanish
+    </a>
+  </div>
+
+  <div class="col-md-6">
+    <a href="{{url_for('renderFilteredData', censusURL='http://api.census.gov/data/2013/language?get=EST,LANLABEL,NAME&for=state:*&LAN=625')}}"
+      class="btn btn-default">
+      <br> Spanish
+    </a>
+  </div>
+
+</div>
 
 </div>
 
