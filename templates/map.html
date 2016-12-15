@@ -43,7 +43,7 @@
       <div class="row">
 
         <div class="col-md-6">
-          <a href="{{url_for('renderFilteredData', censusURL='Population by State$http://api.census.gov/data/2015/acs5?get=NAME,B01001_001E&for=state:*')}}"
+          <a href="/state"
             class="btn btn-default">
             <br> States Population
           </a>
@@ -55,14 +55,14 @@
       <div class="row">
 
         <div class="col-md-6">
-          <a href="{{url_for('renderFilteredData', censusURL='Number of French Speakers By State$http://api.census.gov/data/2013/language?get=NAME,EST,LANLABEL&for=state:*&LAN=620')}}"
+          <a href="/french"
             class="btn btn-default">
             <br> French
           </a>
         </div>
 
         <div class="col-md-6">
-          <a href="{{url_for('renderFilteredData', censusURL='http://api.census.gov/data/2013/language?get=EST,LANLABEL,NAME&for=state:*&LAN=625')}}"
+          <a href="/spanish"
             class="btn btn-default">
             <br> Spanish
           </a>
@@ -74,14 +74,14 @@
       <div class="row">
 
         <div class="col-md-6">
-          <a href="{{url_for('renderFilteredData', censusURL='Number of German Speakers By State$http://api.census.gov/data/2013/language?get=NAME,EST,LANLABEL&for=state:*&LAN=607')}}"
+          <a href="/german"
             class="btn btn-default">
             <br> German
           </a>
         </div>
 
         <div class="col-md-6">
-          <a href="{{url_for('renderFilteredData', censusURL='Number of Portuguese Speakers By State$http://api.census.gov/data/2013/language?get=NAME,EST,LANLABEL&for=state:*&LAN=629')}}"
+          <a href="/portuguese"
             class="btn btn-default">
             <br> Portuguese
           </a>
@@ -89,39 +89,47 @@
 
       </div>
 	  
-	  
-      <br> Language
+      <br> Health Insurance
       <div class="row">
 
         <div class="col-md-6">
-          <a href="{{url_for('renderFilteredData', censusURL='http://api.census.gov/data/2013/language?get=EST,LANLABEL,NAME&for=state:*&LAN=625')}}"
+          <a href="/insured"
             class="btn btn-default">
-            <br> Spanish
+            <br> Number of Insured People
           </a>
         </div>
 
         <div class="col-md-6">
-          <a href="{{url_for('renderFilteredData', censusURL='http://api.census.gov/data/2013/language?get=EST,LANLABEL,NAME&for=state:*&LAN=625')}}"
+          <a href="/uninsured"
             class="btn btn-default">
-            <br> Spanish
+            <br> Number of Uninsured People
           </a>
         </div>
 
       </div>
-      <br> Language
+      <br> Poverty
       <div class="row">
 
         <div class="col-md-6">
-          <a href="{{url_for('renderFilteredData', censusURL='http://api.census.gov/data/2013/language?get=EST,LANLABEL,NAME&for=state:*&LAN=625')}}"
+          <a href="/poverty"
             class="btn btn-default">
-            <br> Spanish
+            <br> Number of People in Poverty
           </a>
         </div>
 
         <div class="col-md-6">
-          <a href="{{url_for('renderFilteredData', censusURL='http://api.census.gov/data/2013/language?get=EST,LANLABEL,NAME&for=state:*&LAN=625')}}"
+          <a href="/poverty04"
             class="btn btn-default">
-            <br> Spanish
+            <br> Number of People in Poverty Ages 0-4
+          </a>
+        </div>
+		
+		<br>
+		
+		<div class="col-md-6">
+          <a href="{{url_for('renderFilteredData', censusURL='Number of People in Poverty Ages 5-17$http://api.census.gov/data/timeseries/poverty/saipe?get=STABREV,SAEPOV5_17R_PT&for=state:*&time=2015')}}"
+            class="btn btn-default">
+            <br> Number of People in Poverty Ages 5-17
           </a>
         </div>
 

@@ -2,7 +2,7 @@ import plotly.plotly as py
 import plotly.tools as tls
 from urllib2 import urlopen
 import os
-tls.set_credentials_file(username='fhaque1', api_key=open(os.getcwd() + '/apiKey.txt').read().split("\n")[1])
+tls.set_credentials_file(username='farhan3231', api_key=open(os.getcwd() + '/apiKey.txt').read().split("\n")[1])
 from apiManager import censusAPIManager
 
 url="http://api.census.gov/data/2013/language?get=EST,LANLABEL,NAME&for=state:*&LAN=625"
@@ -10,7 +10,7 @@ url="http://api.census.gov/data/2013/language?get=EST,LANLABEL,NAME&for=state:*&
 #takes in url, gets you the data
 def urlparser(url):
     x = url.split("/")
-    return censusAPIManager('https://api.census.gov/data/').getAPIData(x[4],x[5])
+    return censusAPIManager('https://api.census.gov/data/').getAPIData(x[4],x[5]+'/'+x[6])
 
 #makes map colorful
 scl = [[0.0, 'rgb(242,240,247)'],[0.2, 'rgb(218,218,235)'],[0.4, 'rgb(188,189,220)'],\
@@ -21,7 +21,7 @@ def dataToList(result):
     result = sorted(result)
     x = []
     for d in result:
-        if d[0] == "NAME" or d[0] == "District of Columbia" or d[0] == "Puerto Rico":
+        if d[0] == "NAME" or d[0] == "District of Columbia" or d[0] == "Puerto Rico" or d[0] =="STABREV" or d[0] =="DC" or d[0] =="PR":
             continue
         x.append(d[1])
     return x
@@ -67,4 +67,4 @@ def mapMaker(url,fname):
 	)
 
 	fig = dict( data=data, layout=layout )
-	return py.plot(fig, filename=fname)
+	py.plot(fig, filename=fname)
