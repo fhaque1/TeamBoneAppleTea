@@ -1,5 +1,6 @@
 import plotly.plotly as py
 import plotly.tools as tls
+from urllib2 import urlopen
 import os
 tls.set_credentials_file(username='fhaque1', api_key=open(os.getcwd() + '/apiKey.txt').read().split("\n")[1])
 from apiManager import censusAPIManager
@@ -66,4 +67,4 @@ def mapMaker(url,fname):
 	)
 
 	fig = dict( data=data, layout=layout )
-	py.plot(fig, filename=fname)
+	return py.plot(fig, filename=fname)
