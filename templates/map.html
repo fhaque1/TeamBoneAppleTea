@@ -45,7 +45,7 @@
         <div class="col-md-6">
           <a href="{{url_for('renderFilteredData', censusURL='Population by State$http://api.census.gov/data/2015/acs5?get=NAME,B01001_001E&for=state:*')}}"
             class="btn btn-default">
-            <br> American Population
+            <br> States Population
           </a>
         </div>
 
@@ -55,9 +55,9 @@
       <div class="row">
 
         <div class="col-md-6">
-          <a href="{{url_for('renderFilteredData', censusURL='Number of Spanish Speakers By State$http://api.census.gov/data/2013/language?get=NAME,EST,LANLABEL&for=state:*&LAN=625')}}"
+          <a href="{{url_for('renderFilteredData', censusURL='Number of French Speakers By State$http://api.census.gov/data/2013/language?get=NAME,EST,LANLABEL&for=state:*&LAN=620')}}"
             class="btn btn-default">
-            <br> Spanish
+            <br> French
           </a>
         </div>
 
@@ -69,24 +69,27 @@
         </div>
 
       </div>
-      <br> Language
+	  
+	  <br>
       <div class="row">
 
         <div class="col-md-6">
-          <a href="{{url_for('renderFilteredData', censusURL='http://api.census.gov/data/2013/language?get=EST,LANLABEL,NAME&for=state:*&LAN=625')}}"
+          <a href="{{url_for('renderFilteredData', censusURL='Number of German Speakers By State$http://api.census.gov/data/2013/language?get=NAME,EST,LANLABEL&for=state:*&LAN=607')}}"
             class="btn btn-default">
-            <br> Spanish
+            <br> German
           </a>
         </div>
 
         <div class="col-md-6">
-          <a href="{{url_for('renderFilteredData', censusURL='http://api.census.gov/data/2013/language?get=EST,LANLABEL,NAME&for=state:*&LAN=625')}}"
+          <a href="{{url_for('renderFilteredData', censusURL='Number of Portuguese Speakers By State$http://api.census.gov/data/2013/language?get=NAME,EST,LANLABEL&for=state:*&LAN=629')}}"
             class="btn btn-default">
-            <br> Spanish
+            <br> Portuguese
           </a>
         </div>
 
       </div>
+	  
+	  
       <br> Language
       <div class="row">
 

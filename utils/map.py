@@ -67,6 +67,4 @@ def mapMaker(url,fname):
 	)
 
 	fig = dict( data=data, layout=layout )
-	print "FAJKLFJDLSKJFA;SJFKDSLA;FJLSD;FJ"
-	print urlopen(py.plot(fig, filename=fname))
-	#return "embed url"
+	return py.plot(fig, filename=fname)
