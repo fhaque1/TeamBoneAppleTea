@@ -56,3 +56,7 @@ Created Map for American Community Service 5 year Data, and put on Map.html
 
 patrickC -- 2016-12-14 20:42
 Modified README.md to meet the specification and provide more detailed information
+
+patrickC -- 2016-12-14 21:52
+Modified map.html to pass the census url to app.py which currently takes the url and prints the parsed url (url.split('/')) for testing purpose
+Note: We need to replace the parsed url with something in the form of render_template("map.html", url="map embed link")
