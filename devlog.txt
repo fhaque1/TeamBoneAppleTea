@@ -63,3 +63,6 @@ Note: We need to replace the parsed url with something in the form of render_tem
 
 lindseyM, -- 2016-12-14 22:12
 Edited design changes doc
+
+farhanH, -- 2016-12-15 03:14
+Finished map.py, map.html, and app.py. Completed Functionality
